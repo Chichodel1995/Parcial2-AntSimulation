@@ -40,7 +40,7 @@ namespace AntSimulation
         }
 
         public virtual void InternalUpdateOn(World world)
-        {
+        {//Environment significa ambiente/Entorno.
             long now = Environment.TickCount;
             if (now - lastUpdate > UpdateInterval)
             {

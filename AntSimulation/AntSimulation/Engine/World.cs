@@ -33,12 +33,12 @@ namespace AntSimulation
         {
             return new PointF(rnd.Next(width), rnd.Next(height));
         }
-
+        // Posible problema. El rnd.NextDouble genera un valor aleatorio sin límite.
         public float Random()
         {
             return (float)rnd.NextDouble();
         }
-
+        //Posible problema. El rnd.NextDouble genera un valor aleatorio sin límite.
         public float Random(float min, float max)
         {
             return (float)rnd.NextDouble() * (max - min) + min;
@@ -72,9 +72,9 @@ namespace AntSimulation
             }
         }
 
-        public double Dist(PointF a, PointF b)
+        public float Dist(PointF a, PointF b)
         {
-            return Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2));
+            return (float)Math.Sqrt(Math.Pow(b.X - (-a.X), 2) + Math.Pow(b.Y - (-a.Y), 2));
         }
 
         public double Dist(float x1, float y1, float x2, float y2)
